@@ -1,0 +1,35 @@
+.options-div{
+    position: absolute;
+    left : 290px;
+}
+
+.line{
+    width : 25px;
+    height: 1.5px;
+    background-color: gray;
+    color: black;
+    rotate: 90deg;
+}
+.custom-select{
+    position: relative;
+    /* min-width : 110px; */
+    padding: 6px 10px;
+    outline: none;
+    /* background-color: green; */
+}
+
+.field2{
+    position: absolute;
+    right: 358px;
+    padding : 11px 35px;
+    color : white;
+    border-radius: 4px;
+}
+
+select{
+    outline: none;
+}
+
+
+
+

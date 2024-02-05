@@ -1,0 +1,43 @@
+.Login-left-div{
+    background-image: url("../assets/Login_background.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width : 70%;
+    position: relative;
+}
+
+.Login-left-div::before{
+    content: "";
+    position: absolute;
+    background-color: #000;
+    opacity: .7;
+    width : 100%;
+    height: 100%;
+}
+
+.Login-Left-content{
+    margin-top: -200px;
+}
+
+.hand-icon{
+    animation: waveanimation 2s linear infinite;
+}
+
+@keyframes waveanimation {
+    0%,100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-25deg);
+    
+    }
+    50% {
+        transform: rotate(0deg);
+    
+    }
+    75% {
+        transform: rotate(25deg);
+    
+    }   
+}

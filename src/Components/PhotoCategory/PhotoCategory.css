@@ -1,0 +1,30 @@
+.category-items{
+    position: relative;
+    overflow: hidden;
+   
+}
+
+.category-items img{
+    transition: .2s ease-in-out;
+
+}
+
+.overlay3{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and transparency */
+  opacity: 0; /* Initially hidden */
+  transition: .2s ease;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.category-items:hover img{
+    transform: scale(1.02);
+}
+.category-items:hover .overlay3{
+    opacity: .5;
+}

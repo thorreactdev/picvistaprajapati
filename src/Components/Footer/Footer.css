@@ -1,0 +1,61 @@
+.footer-content span{
+    color : gray;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    font-size: 15px;
+}
+.footer-content span:hover{
+    color : white;
+}
+.main-footer{
+    height: 65vh;
+}
+.twit-logo{
+    background-color: #1DA1F2;
+    width: 40px;
+    height: 40px;
+}
+.twit-logo i{
+    color : white;
+    font-size: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.insta-logo{
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(#f9ce34, #ee2a7b ,#6228d7);
+}
+.insta-logo i{
+    color : white;
+    font-size: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.linkedin-logo{
+    width: 40px;
+    height: 40px;
+    background-color: #0077b5;
+}
+.linkedin-logo i{
+    color : white;
+    font-size: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.youtube-logo{
+    width: 40px;
+    height: 40px;
+    background-color:  #CD201F;
+}
+.youtube-logo i{
+    color: white;
+    font-size: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}

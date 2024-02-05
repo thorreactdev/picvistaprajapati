@@ -1,0 +1,14 @@
+.relative {
+    transition: transform 0.5s ease; /* Add transition property for smooth scrolling */
+  }
+  
+  /* Styles for the "Prev" and "Next" buttons */
+  .absolute {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+  }
+  
+  .absolute:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
