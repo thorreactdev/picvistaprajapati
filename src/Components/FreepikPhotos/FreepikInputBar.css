@@ -1,0 +1,46 @@
+.vector-bg{
+    background-image: url(../../assets/7598163.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+}
+.vector-bg::before{
+    content:  "";
+    position: absolute;
+    width: 100%;
+    height:  100%;
+    background-color: #121212;
+    opacity: .7;
+
+}
+
+.vector-image{
+    position: relative;
+    overflow: hidden;
+
+}
+
+.vector-image img{
+    transition: .2s ease-in-out;
+}
+
+.overlay7{
+    position: absolute;
+    content:  "";
+    top :0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+
+.vector-image:hover img{
+    transform: scale(1.02);
+}
+.vector-image:hover .overlay7{
+    opacity: .3;
+}

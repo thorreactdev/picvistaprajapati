@@ -5,9 +5,11 @@ import TypingAnimation from "../Components/TypingAnimation/TypingAnimation";
 import freepik_logo from "../assets/freepik-logo-png-transparent.png";
 import { GoogleLogin } from "@react-oauth/google"
 import { toast } from 'react-toastify';
+import { useNavigate } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
 function RegistrationPage(){
+  const navigate = useNavigate();
     const[userDatas , setuserData] = useState({
         firstname :"",
         email :"",
@@ -42,6 +44,7 @@ function RegistrationPage(){
               password :"",
             })
             toast.success(data.message);
+            navigate("/Login");
           }else{
             toast.error(data.message);
           }
@@ -141,7 +144,7 @@ function RegistrationPage(){
           <hr className="w-96" />
 
           {/* //google-login */}
-            <div className="google-login-container w-96">
+            {/* <div className="google-login-container w-96">
             <GoogleLogin
               onSuccess={(credentialResponse) => {
                 console.log(credentialResponse);
@@ -151,7 +154,7 @@ function RegistrationPage(){
               }}  
             />
 
-            </div>
+            </div> */}
            
         </div>
       </div>

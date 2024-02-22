@@ -7,7 +7,7 @@ import logo from "../../assets/BSC_IT-removebg-preview.png";
 const Footer = () => {
   return (
        <div>
-        <div className='bg-black text-white px-16 py-14 flex gap-52 main-footer'>
+        <div className='bg-black text-white px-16 pt-14 flex gap-52 main-footer'>
             <div className='footer-content flex flex-col gap-2'>
                 <h1 className='font-semibold'>Content</h1>
                 <span>Calendar of festivities</span>

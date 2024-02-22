@@ -56,7 +56,7 @@ const NewNavbar = () => {
       </div>
 
       <div
-        style={{ height: "86px" }}
+        style={{ height: "90px" }}
         className="bg-white flex items-center px-8 gap-12 shadow-lg"
       >
         <div className="">
@@ -82,7 +82,7 @@ const NewNavbar = () => {
           <input
             type="text"
             placeholder="Search For Photos You Have Been Looking For 😊"
-            className="border outline-none py-4 rounded w-full pl-32 placeholder:text-black block text-black shadow "
+            className="border outline-none py-5 rounded w-full pl-32 placeholder:text-black block text-black shadow "
             style={{ backgroundColor: "white" }}
             value={query}
             onChange={handleQueryChange}

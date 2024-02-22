@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const PhotosSection = () => {
   return (
     <>
-      <div className="" style={{ backgroundColor: "#f7f7f7" }}>
+      <div className="" style={{ backgroundColor: "#ffffff" }}>
         <div className="flex flex-col gap-2 items-center pt-12">
           <h1 className="uppercase text-center text-black font-semibold text-2xl">
             The Right Photo For Every Moment
@@ -22,13 +22,17 @@ const PhotosSection = () => {
         <div className="photos flex gap-8 flex-wrap items-center justify-center">
           {PhotosData.map((photo) => {
             return (
-              <Link to={`/PhotoCategory/${encodeURIComponent(photo.text.toLowerCase())}`}>
+              <Link to={`/PhotoCategory/${encodeURIComponent(photo.text.toLowerCase())}`} onClick={() => window.scrollTo({
+                top :0,
+                behavior : "smooth",
+              })}>
                 <div className="main-photo-div">
                   <img
                     src={photo.image}
                     alt=""
                     width="310px"
                     className="image-card-div"
+                    
                   />
                   <div className="overlay"></div>
                   <h1 className="capitalize font-medium text-lg text-center mt-7">

@@ -182,7 +182,7 @@ const PhotoCategory = () => {
                    <h1 className="text-4xl font-bold capitalize mb-7">
                   {selectedCategory?.heading}
                    </h1>
-                <span className="text-lg w-5/6 font-medium text-gray-600 ">
+                <span className="text-lg font-medium text-gray-600">
                   {selectedCategory?.paragraph}
                 </span>
                 </div>
@@ -204,9 +204,15 @@ const PhotoCategory = () => {
                           alt={categoryPhoto.alt}
                           className="rounded"
                           width="300px"
+                          
                         />
                       </div>
-                      <div className="overlay3"></div>
+                      <div className="overlay3 flex items-center justify-center flex-col gap-3">
+                        <span style={{border : "2px solid #fff" , borderRadius : "50%" , width : "50px" , height : "50px" , display : "flex" , alignItems : "center" , justifyContent : "center"}}>
+                        <i className='bx bxs-camera-plus text-white text-3xl'></i>
+                        </span>
+                        <h2 className="text-white relative font-bold text-xl">{categoryPhoto.photographer}</h2>
+                      </div>
                     </Link>
                   </>
                 );

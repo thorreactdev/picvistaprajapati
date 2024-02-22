@@ -87,3 +87,20 @@
   background-color: #e7e7e7;
   padding: 2px;
 }
+
+.download-section2{
+  box-shadow: 1px 2px 3px #ccc;
+    width : 130%;
+    height: 550px;
+    border : 1px solid #ccc;
+    padding: 18px 15px;
+}
+
+.line3{
+  width : 100%;
+  height: 1px;
+  background-color: #ccc;
+  color : #ccc;
+  margin-top: 17px;
+  margin-bottom: 20px;
+}

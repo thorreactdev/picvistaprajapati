@@ -4,9 +4,13 @@ import "../SearchResultComp/SearchResult.css";
 import NewNavbar from "../NewNavbar/NewNavbar";
 import pug from "../../assets/pug-dog-isolated-white-background-removebg-preview.png";
 import Footer from "../Footer/Footer";
+import env from "react-dotenv";
+
 
 const SearchResult = () => {
   const apiKey = "LxIZK1kWvDEiUjrOd8iRoD0cgnaSRUHpNpTwhY0pqsm0zJpKWLIszsx5";
+  console.log(apiKey);
+  
 
   //extract query value from the url
   const { query, searchType } = useParams();
@@ -146,11 +150,17 @@ const SearchResult = () => {
                       alt={media.alt}
                       width="300px"
                       className="rounded"
+                      
                      
                     />
                   </Link>
                 )}
-                <div className="overlay1"></div>
+                <div className="overlay1 flex items-center justify-center flex-col gap-3">
+                <span style={{border : "2px solid #fff" , borderRadius : "50%" , width : "50px" , height : "50px" , display : "flex" , alignItems : "center" , justifyContent : "center"}}>
+                        <i className='bx bxs-camera-plus text-white text-3xl'></i>
+                        </span>
+                        <h2 className="text-white relative font-bold text-xl text-center">{media.photographer}</h2>
+                </div>
               </div>
             ))
           ) : (

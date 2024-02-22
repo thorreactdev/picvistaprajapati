@@ -1,0 +1,54 @@
+.ai-bg-image{
+    background-image: url(../../assets/cover-subhome.jpg);
+    background-size: cover;
+    background-position: center;
+    height : 80vh;
+    object-fit: cover;
+    position: relative;
+}
+
+.ai-bg-image::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    opacity: .6;
+    pointer-events: none;
+}
+
+@keyframes buzz {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+  }
+  
+  .buzz-image {
+    animation: buzz 2s infinite linear;
+  }
+
+
+  @keyframes greeting {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-4px); /* Move the image up slightly */
+    }
+    50% {
+      transform: translateY(0); /* Return to the original position */
+    }
+    75% {
+      transform: translateY(4px); /* Move the image down slightly */
+    }
+    100% {
+      transform: translateY(0); /* Return to the original position */
+    }
+  }
+  
+  .greet-image {
+    animation: greeting 3s infinite linear;
+  }
+  
+
+

@@ -1,9 +1,14 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import { jwtDecode } from "jwt-decode";
+import { Navigate} from "react-router-dom";
 
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
+ 
+
+
   //normal variable declaration
   const apiKey = "LxIZK1kWvDEiUjrOd8iRoD0cgnaSRUHpNpTwhY0pqsm0zJpKWLIszsx5";
 
@@ -24,6 +29,8 @@ export const AuthProvider = ({ children }) => {
   const [small, setSmall] = useState(false);
   const [portrait, setPortrait] = useState(false);
 
+  console.log(token);
+
   const isLoggedin = !!token;
 
   const storeToken = (serverToken) => {
@@ -31,11 +38,18 @@ export const AuthProvider = ({ children }) => {
     return localStorage.setItem("token", serverToken);
   };
 
+  //check if the token is expired or not if expired show toast message and logout the user
+  
+
+
+  //Logout user function
   const LogoutUser = () => {
     setToken("");
     localStorage.removeItem("token");
   };
 
+
+  //function to check user authentication
   const userAUthentication = async () => {
     try {
       const response = await fetch("http://localhost:5000/api/auth/userdata", {
@@ -48,6 +62,14 @@ export const AuthProvider = ({ children }) => {
       console.log(data);
       if (response.ok) {
         setUser(data[0]);
+      }else{
+        const decoded = jwtDecode(token);
+        console.log(decoded);
+        if(decoded.exp < Date.now() / 1000){
+          toast.error("Token Expired Please Login");
+          LogoutUser();
+          <Navigate to="/Login"/>
+        }
       }
     } catch (error) {
       console.log(error);
@@ -130,6 +152,7 @@ export const AuthProvider = ({ children }) => {
       link.type = contentType;
 
       link.click();
+      toast.success("Image Downloaded Sucessfully");
       setLoader2(false);
       setLarge2x(false);
       setLarge(false);
@@ -148,6 +171,7 @@ export const AuthProvider = ({ children }) => {
       setPortrait(false);
     }
   };
+
 
   const videoDownLoadLogic = async(id) =>{
     try {
@@ -197,7 +221,8 @@ export const AuthProvider = ({ children }) => {
         portrait,
         videoDownLoadLogic,
         videoDetails,
-        apiKey 
+        apiKey ,
+        
       }}
     >
       {children}

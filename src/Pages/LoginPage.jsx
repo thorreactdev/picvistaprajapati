@@ -50,7 +50,9 @@ function LoginPage() {
                 storeToken(data.token);
                 userAUthentication(data.token);
                 toast.success(data.message);
+                
                 navigate("/");
+                
             }else{
                 toast.error(data.message);
             }   

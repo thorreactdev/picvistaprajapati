@@ -13,7 +13,7 @@ const userDetails = async(req,res) =>{
     
         const hashPassword = await bcrypt.hash(password, 10);
         await db.query("INSERT INTO userdata (firstname , email , password) VALUES(?,?,?)",[firstname,email,hashPassword]);
-        const token = jwt.sign({email} , process.env.SECRET_KEY, {expiresIn:"300d"});
+        const token = jwt.sign({email} , process.env.SECRET_KEY, {expiresIn:"2d"});
         console.log(token);
         res.status(200).json({message:"Registartion Sucessfull" , token , email});
         
@@ -40,7 +40,7 @@ const userLogin = async(req,res) =>{
         if(!validPass){
             return res.status(401).json({message:"Invalid Password"});
         }
-        const token = jwt.sign({ID :userExists[0].ID,email}, process.env.SECRET_KEY ,{expiresIn :"1d"});
+        const token = jwt.sign({ID :userExists[0].ID,email}, process.env.SECRET_KEY ,{expiresIn :"2d"});
         res.status(200).json({message:"Login Sucessfull" , token : token});
         console.log(token);
         

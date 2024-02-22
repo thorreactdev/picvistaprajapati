@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "../ImageToPDF/ImageToPDF.css";
 import jsPdf from "jspdf";
+import ConfirmLogout from '../Popups/ConfirmLogout';
 
 const ImageToPDF = () => {
     const[imageDataUrl , setImageDataUrl] = useState(null);
@@ -32,6 +33,7 @@ const ImageToPDF = () => {
         }
     };
   return (
+    <div>
     <div className='shadow-lg w-4/6 m-auto mt-14 py-4 px-4' style={{height : "70vh"}}>
         <div>
             <h1 className='text-center font-semibold text-4xl text-blue-700'>Image To PDF Converter</h1>
@@ -44,6 +46,8 @@ const ImageToPDF = () => {
                 Convert to PDF
             </button>
         </div>
+    </div>
+        <ConfirmLogout/>
     </div>
   )
 }

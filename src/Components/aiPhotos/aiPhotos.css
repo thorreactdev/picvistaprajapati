@@ -1,0 +1,115 @@
+.image-tag{
+ 
+    /* width: 380px; */
+    /* height: 480px; */
+    /* height: 450px; */
+    object-fit: cover;
+    
+    
+}
+.ai-images-div{
+    display: flex;
+    columns: 8 380px;
+    max-width: fit-content;
+  
+}
+
+.overlay4{
+    position: absolute;
+    top :0;
+    left : 0;
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    opacity: 0;
+    pointer-events: none;
+}
+.aimap-div{
+   
+    
+}
+
+.aimap-div img{
+    transition: .2s ease-in-out;
+}
+.aimap-div{
+    overflow: hidden;
+    transition: .2s ease-in-out;
+}
+
+.aimap-div:hover img{
+    transform: scale(1.02); 
+}
+
+.aimap-div:hover .overlay4{
+    opacity: .3;
+}
+
+.search-icon{
+    width : 60px;
+    height: 60px;
+    border : 1px solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: dodgerblue;
+    color : white;
+    border : transparent;
+}
+
+.search-icon i{
+    font-size: 2rem;
+}
+
+.bg-image-just{
+    background-image: linear-gradient(0deg,rgba(1,1,88,.9),rgba(1,1,88)), url("../../aiiamgesfold/noise.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+}
+
+.visual{
+    transition: .3s ease-in-out;
+}
+.visual:hover{
+    transform: scale(1.03);
+}
+.ai-image-sec{
+    cursor: pointer;
+}
+.img-container img{
+    transition: .2s ease-in-out;
+}
+
+.img-container{
+    position: relative;
+    overflow: hidden;
+    transition: .2s ease-in-out;
+}
+.img-container:hover img{
+    transform: scale(1.1);
+}
+
+.overlay-image{
+    position: absolute;
+    width : 100%;
+    height : 100%;
+    bottom : 0;
+    left : 0;
+    background-color: rgba(0, 0,0,.6);
+    color : white;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 1;
+    font-size: 1.6rem; 
+    transition: .5s ease-out;
+    border-radius: 3px;
+
+}
+
+
+

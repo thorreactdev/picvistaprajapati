@@ -1,0 +1,33 @@
+.main-ai-result{
+    position: relative;
+    overflow: hidden; 
+}
+
+.main-ai-result img{
+    transition: .2s ease-in-out;
+    width : 370px;
+    /* height: 400px; */
+}
+
+.overlay6{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.9);
+    opacity: 0;
+    transition: .2s ease-in-out;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-ai-result:hover img{
+    transform: scale(1.02);
+}
+
+.main-ai-result:hover .overlay6{
+    opacity: .8;
+}
