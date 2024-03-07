@@ -36,7 +36,9 @@ function Navbar() {
           {/* <h1 className="text-white font-extrabold text-3xl">PICV!STA</h1> */}
           <div className="flex gap-8 text-white font-medium text-medium hover:text-black-100">
             <Link to="/freepikvector">
-              <span className="hover:text-gray-300 transition ease-in-out delay-100"></span>
+              <span className="hover:text-gray-300 transition ease-in-out delay-100">
+                Vector
+              </span>
             </Link>
             <Link to="/">
               <span className="hover:text-gray-300 transition ease-in-out delay-100">
@@ -59,11 +61,13 @@ function Navbar() {
                 AI Images
               </span>
             </Link>
-            <span className="hover:text-gray-300 transition ease-in-out delay-100"></span>
-            <span className="hover:text-gray-300 transition ease-in-out delay-100"></span>
-            <Link to="/imagetopdf">
-              <span className="hover:text-gray-300 transition ease-in-out delay-100"></span>
-            </Link>
+            {/* <span className="hover:text-gray-300 transition ease-in-out delay-100"></span> */}
+            {/* <span className="hover:text-gray-300 transition ease-in-out delay-100"></span> */}
+            {/* <Link to="/imagetopdf">
+              <span className="hover:text-gray-300 transition ease-in-out delay-100">
+
+              </span>
+            </Link> */}
           </div>
         </div>
         <div className="flex gap-8 items-center text-white font-medium text-medium">

@@ -58,7 +58,7 @@ const AiResult = () => {
               </div>
             ))
           : aiPhotos?.map((aiphotowala, index) => (
-              <div className="main-ai-result">
+              <div className="main-ai-result" key={index}>
                 <Link to={`/SingleDisplayai/${aiphotowala.id}`} onClick={()=> window.scrollTo({
                   top : 0,
                   behavior : 'smooth',
